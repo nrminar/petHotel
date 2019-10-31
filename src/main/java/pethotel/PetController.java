@@ -16,4 +16,10 @@ public class PetController{
     public String hello(){
         return "Hello World";
     }
+    @RequestMapping("/owners")
+    public List<Owner> getOwners(){
+        String query = "SELECT * FROM owners;";
+        List<Owner> owners = jdbcTemplate.query(query, new OMapper());
+        return owners;
+    }
 }
