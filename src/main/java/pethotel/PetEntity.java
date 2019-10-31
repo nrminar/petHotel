@@ -44,7 +44,7 @@ public class PetEntity{
         this.p_breed = p_breed;
     }
 
-    public void setPetBreed(boolean p_checkIn){
+    public void setCheckIn(boolean p_checkIn){
         this.p_checkIn = p_checkIn;
     }
 
