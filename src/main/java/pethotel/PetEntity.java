@@ -2,66 +2,92 @@ package pethotel;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PetEntity{
+    @JsonProperty (value = "id")
     private int id;
-    private String p_name;
-    private String p_breed;
-    private boolean p_checkIn;
-    private Date p_checkInDate;
-    private int p_owner_id;
+    @JsonProperty (value = "pName")
+    private String pName;
+    @JsonProperty (value = "pBreed")
+    private String pBreed;
+    @JsonProperty (value = "pColor")
+    private String pColor;
+    @JsonProperty (value = "pCheckIn")
+    private boolean pCheckIn;
+    @JsonProperty (value = "pCheckInDate")
+    private Date pCheckInDate;
+    @JsonProperty (value = "pOwner")
+    private int pOwner;
+    @JsonProperty (value = "url")
+    private String url;
 
     public int getId() {
         return this.id;
     }
     public String getPetName(){
-        return this.p_name;
+        return this.pName;
     }
 
     public String getBreedName() {
-        return this.p_breed;
+        return this.pBreed;
+    }
+    public String getColor() {
+        return this.pColor;
     }
 
     public boolean getCheckIn() {
-        return this.p_checkIn;
+        return this.pCheckIn;
     }
 
     public Date getCheckInDate(){
-        return this.p_checkInDate;
+        return this.pCheckInDate;
     }
     public int getPetOwnerId(){
-        return this.p_owner_id;
+        return this.pOwner;
+    }
+    public String getPetUrl(){
+        return this.url;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setPetName(String p_name){
-        this.p_name = p_name;
+    public void setPetName(String pName){
+        this.pName = pName;
     }
 
-    public void setPetBreed(String p_breed){
-        this.p_breed = p_breed;
+    public void setPetBreed(String pBreed){
+        this.pBreed = pBreed;
+    }
+    public void setPetColor(String pColor){
+        this.pColor = pColor;
     }
 
-    public void setCheckIn(boolean p_checkIn){
-        this.p_checkIn = p_checkIn;
+    public void setCheckIn(boolean pCheckIn){
+        this.pCheckIn = pCheckIn;
     }
 
-    public void setCheckInDate(Date p_checkInDate){
-        this.p_checkInDate = p_checkInDate;
+    public void setCheckInDate(Date pCheckInDate){
+        this.pCheckInDate = pCheckInDate;
     }
 
-    public void setPetOwnerId(int p_owner_id){
-        this.p_owner_id = p_owner_id;
+    public void setPetOwnerId(int pOwner){
+        this.pOwner = pOwner;
+    }
+    public void setPetUrl(String url){
+        this.url = url;
     }
     public PetEntity (){}
-    public PetEntity (int id, String p_name, String p_breed, boolean p_checkIn, Date p_checkInDate, int p_owner_id){ 
+    public PetEntity (int id, String pName, String pBreed, String pColor, boolean pCheckIn, Date pCheckInDate, int pOwner, String url){ 
         this.id = id;
-        this.p_name = p_name;
-        this.p_breed = p_breed;
-        this.p_checkIn = p_checkIn;
-        this.p_checkInDate = p_checkInDate;
-        this.p_owner_id = p_owner_id;
+        this.pName = pName;
+        this.pBreed = pBreed;
+        this.pColor = pColor;
+        this.pCheckIn = pCheckIn;
+        this.pCheckInDate = pCheckInDate;
+        this.pOwner = pOwner;
+        this.url = url;
     }
 }
